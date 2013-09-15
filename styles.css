@@ -1,0 +1,1119 @@
+/* ------------------------------------------------------------------------------------
+--  GENERAL
+------------------------------------------------------------------------------------ */
+body {
+	width:100%;
+	height: 100%; 
+	background:#E9E9E9;
+	font-family:'Mako', sans-serif;
+    margin:0; 
+	padding: 0;
+}
+html{ 
+    width:100%;
+    height:100%;
+}
+::selection{
+	background:#a1b2a3;
+}
+::-moz-selection{
+	background:#a1b2a3;
+}
+a{
+	outline:none;
+	text-decoration:none;
+	border:none;
+	color:#968f85;
+}
+a:hover{
+	color:#6d8d6b;;
+}
+input{
+	outline:none;
+}
+strong{
+	font-style:italic;
+	color:#555;
+	line-height:1.5em;
+}
+figure img{
+	float:left;
+	opacity: .7;
+	-moz-transition: opacity;
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 500ms;
+    -webkit-transition: opacity;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+	-o-transition: opacity;
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+	transition: opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+}
+figure img:hover{
+	opacity: 1;
+	-moz-transition: opacity;
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 500ms;
+    -webkit-transition: opacity;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 500ms;
+	-o-transition: opacity;
+    -o-transition-timing-function: ease-out;
+    -o-transition-duration: 500ms;
+	transition: opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 500ms;
+}
+/***TRIANGLE FOR SLIDING PANELS OF NAVIGATION (INDEX.HTML) AND OPENING HOURS (ALL PAGES)***/
+#triangle-down {
+	float:left;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 12px solid #607860;
+	margin:4px 6px 0 0;
+}
+/***COLOURED TOP STRIPS***/
+#colours{
+	float:left;
+	width:980px;
+}
+#colours .color{
+    float:left;
+    height:4px;
+    width:196px;
+    overflow:hidden;
+	opacity:0.8;filter:alpha(opacity=80);
+}
+#colours .color-1{ 
+background-color:#8a8f42;
+}
+#colours .color-2{ 
+background-color:#595610;
+}
+#colours .color-3{ 
+background-color:#77766a;
+}
+#colours .color-4{ 
+background-color:#9c9504;
+}
+#colours .color-5{ 
+background-color:#817e40;
+}
+.divider{
+	float:left;
+	width:710px;
+	border-bottom:1px dashed #ddd;
+	margin:5px 20px 0 20px;
+}
+/* ------------------------------------------------------------------------------------
+--  WRAPPERS
+------------------------------------------------------------------------------------ */
+#wrapper{
+	float:left;
+	width:100%;
+	height:100%;
+	min-height:100%;
+	/*height:100%;*/
+	position:absolute;
+	top:0px;
+	left:0;
+	z-index:1;
+}
+#inner-wrap{
+	float:left;
+	margin-left:30px;
+}
+#main-content-index{
+	float:left;
+	height:540px;
+	width:980px;
+	background:rgba(0,0,0,0.8);
+	border-right:1px solid #000;
+	border-left:1px solid #000;
+	border-bottom:1px solid #000;
+	margin-top:30px;
+	clear:both;
+}
+/* ------------------------------------------------------------------------------------
+--  NAVIGATIONS STYLES: THERE ARE 3 TYPES OF NAVIGATION HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  1) BOTTOM NAVIGATION STYLES FOR INDEX PAGE ONLY
+------------------------------------------------------------------------------------ */
+nav#slide-nav{
+	float:right;
+	margin:20px 30px 20px 0;
+}
+nav#slide-nav a{
+	text-transform:uppercase;
+	color:#ccc;
+	text-align:center;
+	display:inline;
+	text-shadow:0px 0px 1px #fff;
+	letter-spacing:0.2em;
+	opacity: 1;
+	-webkit-transition: opacity 1s linear;
+	-moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+	padding:10px 0;
+	font-size:0.8em;
+}
+nav#slide-nav a:hover{
+	color:#293f29;
+	opacity:0;
+	text-shadow:0px 0px 1px #555;
+}
+/* ------------------------------------------------------------------------------------
+--  2) SIDE NAVIGATION STYLES FOR ALL PAGES APART INDEX
+------------------------------------------------------------------------------------ */
+nav#side{
+	float:right;
+	width:126px;
+	margin:40px 20px 0 0;
+}
+nav#side a{
+	text-transform:uppercase;
+	color:#ccc;
+	padding:0 10px 5px 0;
+	display:block;
+	letter-spacing:0em;
+	opacity: 1;
+	-webkit-transition: opacity 1s linear;
+	-moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+}
+nav#side a:hover{
+	color:#CDE9CA;
+	padding-top:2px;
+	opacity:0;
+	text-decoration:none;
+}
+#social{
+	float:left;
+	margin-top:20px;
+}
+#social figure{
+	float:left;
+	margin-right:5px;
+}
+/* ------------------------------------------------------------------------------------
+--  3) TOP SUB NAVIGATION STYLES FOR INNER PAGES
+------------------------------------------------------------------------------------ */
+nav#top{
+	float:left;
+	margin-left:30px;
+	padding:20px;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	-ms-box-shadow:0px 0px 4px #000;
+    box-shadow:0px 0px 4px #000;
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+	border-left:1px solid #000;
+	background:rgba(0,0,0,0.8);
+}
+nav#top a{
+	text-transform:uppercase;
+	color:#ccc;
+	padding:0 0 5px 0;
+	display:block;
+	text-shadow:0px 0px 1px #fff;
+	letter-spacing:0.2em;
+	opacity: 1;
+	-webkit-transition: opacity 1s linear;
+	-moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+}
+nav#top a:hover{
+	color:#5c6229;
+	padding-top:2px;
+	opacity:0;
+	text-decoration:none;
+}
+/* ------------------------------------------------------------------------------------
+--  HEADER
+------------------------------------------------------------------------------------ */
+header{
+	margin:0;;
+	float:left;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	-ms-box-shadow:0px 0px 4px #000;
+    box-shadow:0px 0px 4px #000;
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+	border-left:1px solid #000;
+	background:rgba(0,0,0,0.8);
+}
+#logo{
+	margin:30px;
+	float:left;
+}
+#logo h1 a{
+	font-size:2.1em;
+	text-decoration:none;
+	color:#e8e5e5;
+	font-weight:normal;
+	font-family:'Michroma', sans-serif;
+	text-shadow:0 0 1px #555;
+	padding-bottom:0.6em;
+	display:block;
+}
+#logo p{
+	text-align:center;
+	font-family: 'Waiting for the Sunrise', serif;
+	color:#e8e5e5;
+	font-size:1.2em;
+	display:block;
+}
+/* ------------------------------------------------------------------------------------
+--  CONTENT SLIDER STYLES ALL PAGES WITH HEIGHT
+------------------------------------------------------------------------------------ */
+#hero-slider {
+    text-align:left; 
+    background-color:#efefef; 
+    border:1px solid #ccc; 
+	width:750px;
+	height:458px;
+    margin:40px;
+	float:left;
+}
+#hero-slider .mask { 
+    float:left; 
+    width:750px; 
+    height:381px; 
+    overflow:hidden;
+}
+#hero-slider .panel { 
+    width:750px; 
+    height:381px; 
+    text-align:left; 
+}
+/* Hiding the original paragraphs if they have not been replaced (JS disabled): */
+.panel-image > p{ 
+    display:none; 
+}
+.panelinfo{
+	margin:0 20px;
+}
+.panelinfo2{
+	margin:20px;
+	clear:both;
+	float:left;
+}
+a.button{
+	float:right;
+	width:25%;
+	background:#ddd;
+	text-align:center;
+	color:#666;
+	padding:8px 0;
+	display:block;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-border-radius:4px;
+	-moz-box-shadow:0px 0px 2px #797979;
+	-webkit-box-shadow:0px 0px 2px #797979;
+	-ms-box-shadow:0px 0px 2px #797979;
+	-box-shadow:0px 0px 2px #797979;
+	border:1px solid #fff;
+	text-transform:uppercase;
+}
+.panelinfo2 p{
+	font-size:0.8em;
+	display:block;
+	width:70%;
+	float:left;
+}
+#hero-slider ul {
+    margin:20px 20px 40px 20px; 
+    list-style:none; 
+    float:left; 
+	width:710px;
+}
+#hero-slider ul li {
+    margin:0 20px 0 0;
+	float:left;
+}
+#hero-slider ul a {
+    outline:none; 
+    text-decoration: none;
+    display:block;
+	color:#555;
+	font-size:0.8em;
+	padding-top:4px;
+	text-transform:capitalize;
+}
+#hero-slider ul a.active {
+    color:#000;
+	border-top:1px solid #000;
+}
+.panel h2 {
+    padding:0 0 0.8em 0;
+    color:#9e9e9e;
+	text-transform:uppercase;
+	font-size:1.2em;
+}
+.panel h3{
+	color:#555;
+	font-weight:normal;
+	font-size:1.1em;
+	font-family:'Oswald', sans-serif;
+	text-shadow:0px 1px 1px #fff;
+	padding:0 0 0.8em 0;
+}
+.panel p {
+    color:#666;
+	line-height:1.5em;
+	padding-bottom:10px;
+}
+.clear {clear:both}
+/* ------------------------------------------------------------------------------------
+--  HOURS SLIDING PANEL
+------------------------------------------------------------------------------------ */
+section#hours{
+	float:left;
+	width:980px;
+	margin-bottom:40px;
+}
+#hours a.btn-slide{
+   	color:#CDE9CA;
+	text-align:center;
+	text-transform:uppercase;
+	padding:10px 24px 14px 24px;
+	display:block;
+	float:left;
+}
+#hours a.btn-slide:hover{
+	color:#607860;
+    text-shadow: 0px 0px 1px #ECF4E6;
+}
+#panel-hours{
+	float:left;
+	background:rgba(96,120,96,0.8);
+	width:980px;
+	display: none;
+	border:1px solid #607860;
+}
+#opening-hours{
+	float:right;
+	margin:20px 30px 20px 0;
+}
+#opening-hours p{
+	text-transform:uppercase;
+	color:#ccc;
+	text-align:center;
+	display:inline;
+	text-shadow:0px 0px 1px #fff;
+	letter-spacing:0.2em;
+	opacity: 1;
+	-webkit-transition: opacity 1s linear;
+	-moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+	padding:10px 0;
+	font-size:0.8em;
+}
+/* ------------------------------------------------------------------------------------
+--  PAGES 
+------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------
+--  INDEX STYLES
+------------------------------------------------------------------------------------ */
+#crossslide{
+	width: 100%;
+	min-height:100%;
+	height:100%;
+	margin:0px auto;
+	position:fixed;
+}
+div#main-content{
+	float:left;
+	width:660px;
+	margin:0 0 0 30px;
+	float:left;
+	background:transparent;
+}
+#frontpage{
+	float:left;
+	height:480px;
+	width:660px;
+	background:rgba(0,0,0,0.8);
+	border:1px solid #000;
+}
+#frontpage article{
+	float:left;
+	margin:27px 60px;
+	height:420px;
+}
+#frontpage article h1{
+	font-size:4em;
+	line-height:1.2em;
+	text-transform:capitalize;
+	font-weight:normal;
+	font-family:'Oswald', sans-serif;
+	letter-spacing:2px;
+	color:#e8e5e5;
+}
+.coloured{
+	color:#607860;
+	text-shadow:0px 1px 1px #000;
+}
+#frontpage article p{
+	font-size:0.95em;
+	display:block;
+	margin-top:4em;
+	line-height:1.4em;
+	color:#c7c7c7;
+}
+#bottom-nav{
+	float:right;
+	margin-right:30px;
+	background:rgba(0,0,0,0.8);
+    -moz-border-radius: 0px 0px 4px 4px;
+	-webkit-border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-khtml-border-bottom-right-radius:6px;
+	-khtml-border-bottom-left-radius:6px;
+     border-radius: 0px 0px 4px 4px;
+}
+#bottom-nav a.btn-slide{
+   	color:#CDE9CA;
+	text-align:center;
+	text-transform:uppercase;
+	padding:10px 24px 14px 24px;
+	display:block;
+	float:left;
+}
+#bottom-nav a.btn-slide:hover{
+	color:#607860;
+    text-shadow: 0px 0px 1px #ECF4E6;
+}
+#panel{
+	float:left;
+	background:rgba(96,120,96,0.8);
+	width:660px;
+	display: none;
+	border:1px solid #607860;
+}
+/* ------------------------------------------------------------------------------------
+--  INDEX ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  A LA CARTE STYLES
+------------------------------------------------------------------------------------ */
+.panelinfo ol.lists{
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:708px;
+	background:#fff;
+	border:1px solid #ddd;
+}
+.panelinfo ol.lists li{
+	float:left;
+	width:218px;
+	margin-right:7px;
+	color:#555;
+}
+.panelinfo ol.lists li.title{
+	width:218px;
+	margin-left:20px;
+	text-transform:uppercase;
+}
+.panelinfo ol.lists li.dots{
+	width:218px;
+	font-size:0.8em;
+}
+.panelinfo ol.lists li.price{
+	width:218px;
+	margin-right:20px;
+	font-family:'Michroma', sans-serif;
+}
+.panelinfo ol.items{
+	float:left;
+	width:218px;
+	margin:20px 0;
+	list-style:none;
+}
+.panelinfo ol.items li{
+	background:#ddd;
+	margin-bottom:7px;
+	height:36px;
+}
+.panelinfo ol.items li:last-child{
+	margin-bottom:0;
+}
+.item-wrapper{
+	margin:10px;
+	float:left;
+	width:198px;
+	background:transparent;
+}
+small.menu-small{
+	font-family:'Mako', sans-serif;
+	padding-left:4px;
+}
+a.button2{
+	background:#ddd;
+	text-align:center;
+	color:#666;
+	padding:0.8em 0.4em;
+	display:block;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-border-radius:4px;
+	-moz-box-shadow:0px 0px 2px #ddd;
+	-webkit-box-shadow:0px 0px 2px #ddd;
+	-ms-box-shadow:0px 0px 2px #ddd;
+	-box-shadow:0px 0px 2px #ddd;
+	border:1px solid #fff;
+	text-transform:uppercase;
+	font-size:14px;
+	font-weight:normal;
+	position:absolute;
+	top:260px;
+	width:140px;
+	left:648px;
+}
+figure.no-frame{
+	float:left;
+	margin-right:10px;
+	padding:0;
+	background:transparent;
+	border:none;
+	margin-top:-6px;
+}
+#data1, #data2{
+	width:660px;
+	overflow:hidden;
+}
+#data1, #data2 p{
+	color:#555;
+	line-height:1.5em;
+}
+article.description{
+	float:left;
+	overflow:hidden;
+	margin:10px;
+	padding:20px;
+	background-color:#efefef; 
+}
+article.description figure{
+	background:#fff;
+	border:1px solid #ddd;
+	padding:20px;
+    float:left;	
+	margin-right:20px;
+}
+.description h1 {
+    padding:0 0 0.8em 0;
+    color:#9e9e9e;
+	text-transform:uppercase;
+	font-size:1.2em;
+}
+/* ------------------------------------------------------------------------------------
+--  A LA CARTE ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  ABOUT US STYLES
+------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------
+--  SLIDING PARTS STYLES (courtesy of Martin Angelov TZ)
+------------------------------------------------------------------------------------ */
+.panel-image{
+	margin:0 20px;
+	background:url(images/staff.jpg)no-repeat;
+	width:710px;
+	height:330px;
+	position:relative;
+}
+.slideOutTip{
+	/* The main wrapping div of the slideout tips */
+	position:absolute;
+	padding:3px;
+	top:0;
+	left:0;
+	background-color:#111;
+	font-size:13px;
+	color:white;
+	overflow:hidden;
+	height:22px;
+}
+.slideOutTip:hover{
+	/* Applying a CSS3 outer glow on hover */
+	-moz-box-shadow:0 0 1px #999;
+	-webkit-box-shadow:0 0 1px #999;
+	box-shadow:0 0 1px #999;
+}
+/* The holder for the title and the icon: */
+.tipVisible{ 
+    cursor:pointer; 
+	height:22px; 
+}
+.tipTitle{
+	float:left;
+	font-family:'Mako', sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	white-space:nowrap;
+	line-height:22px;
+	padding-right:5px;
+}
+.tipIcon{
+	width:20px;
+	height:20px;
+	float:left;
+	background-color:#61b035;
+	border:1px solid #70c244;
+	margin-right:8px;
+	
+	/* CSS3 Rounded corners */
+	
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+}
+.green .tipIcon{ 
+    background-color:#908f4a; 
+	border:1px solid #70c244; 
+}
+.plusIcon{
+	/* The plus icon */
+	width:13px;
+	height:13px;
+	background:url('images/plus.gif') no-repeat center center;
+	margin:4px;
+	-webkit-transition: -webkit-transform 0.2s linear;
+	-moz-transition: -moz-transform 0.2s linear;
+	transition: transform 0.2s linear;
+}
+.slideOutTip.isOpened{ 
+    z-index:10000; 
+}
+.slideOutTip.isOpened .plusIcon{
+	/* Applying a CSS3 rotation  to the opened slideouts*/
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+/* Special rules for the left and top - opening versions */
+.openLeft .tipIcon{
+	/* Floating the title and the icon to the right */
+	margin:0 0 0 8px;
+	float:right;
+}
+.openLeft .tipTitle{ 
+    float:right; 
+	padding:0 0 0 5px; 
+}
+.openLeft .slideOutContent{ 
+    margin-top:22px; 
+}
+.openLeft.openTop .slideOutContent{	
+    margin-top:0; 
+}
+.slideOutContent{
+	/* Hiding the div with the slide out content: */
+	display:none;
+	padding:10px;
+	font-size:13px;
+	line-height:1.3em;
+}
+/* ------------------------------------------------------------------------------------
+--  BLOCKQUOTE STYLES
+------------------------------------------------------------------------------------ */
+blockquote{
+	font-style:italic;
+	line-height:1.5em;
+	letter-spacing:1px;
+	font-weight:normal;
+	color:#8a8787;
+}
+#quotes-wrap{
+	float:left;
+	margin-top:10px;
+}
+.quotes{
+	font-size:0.8em;
+	float:left;
+	width:688px;
+	background:url(images/white-bg.jpg)repeat;
+	border:1px solid #ddd;
+	margin-bottom:20px;
+	padding:10px;
+}
+.quotes img{
+	margin-right:10px;
+	margin-top:-20px;
+}
+.quotes p{
+	overflow:hidden;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+.quotes .name{
+	font-family:Georgia;
+	color:#87998a;
+}
+/* ------------------------------------------------------------------------------------
+--  LOCATION STYLES
+------------------------------------------------------------------------------------ */
+#inner-wrap-map{
+	z-index: 1;
+	position: absolute;
+	margin-left:30px;
+    background:transparent;
+    float:left;
+}
+div#content{
+	float:left;
+	width:400px;
+	overflow:hidden;
+}
+div#bodyContent{
+	width:400px;
+	height:410px;
+	float:left;
+}
+div#bodyContent p{
+	font-size:0.9em;
+	line-height:1.3em;
+	margin-bottom:20px;
+}
+h1#firstHeading{
+	font-family:'Mako', sans-serif;
+	font-size:1.2em;
+	color:#555;
+	padding-bottom:0.5em;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+#map_canvas{
+   height:100%;
+   width:100%;
+}
+/* ------------------------------------------------------------------------------------
+--  LOCATION ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  CONTACT STYLES
+------------------------------------------------------------------------------------ */
+/*-------FORM----------*/
+.form-wrapper {
+	clear:both;
+	overflow:hidden;
+	float:left;
+}
+form#contact ol#forma{
+	width:710px;
+	background:transparent;
+	list-style:none;
+	background:#fff;
+	border:1px solid #ddd;
+	float:left;
+}
+form#contact li.form-item{
+	float:left;
+	width:323px;
+	margin-right:10px;
+	margin-left:20px;
+	margin-top:20px;
+}
+form#contact li.form-item2{
+	float:right;
+	width:323px;
+	margin-left:10px;
+	margin-right:20px;
+	margin-top:20px;
+}
+form#contact li.form-item3{
+	float:left;
+	width:670px;
+	margin:20px;
+}
+form#contact li.form-item4{
+	float:left;
+	width:670px;
+	margin:0 0 20px 20px;
+}
+.form-wrapper label {
+	display:block;
+	height:0;
+	margin:0;
+	text-indent:-9999px;
+}
+.form-wrapper input {
+	border:none;
+    padding:10px 0;
+	line-height:1.3em;
+	outline:none;
+	border:1px solid rgba(142,119,87,0.4);
+	width:253px;
+	font-size:1.1em;
+	color:#ddd;
+	padding:4px 0 4px 70px;
+	height:30px;
+}
+#entry_0{
+	background:url(images/input-name.png)no-repeat;
+}
+#entry_1{
+	background:url(images/input-email.png)no-repeat;
+}
+#entry_2{
+	background:url(images/textarea.png)repeat;
+}
+form#contact textarea{
+	border:1px solid rgba(142,119,87,0.4);
+	width:661px;
+	font-size:1.1em;
+	color:#ddd;
+	padding:4px;
+}
+#buttonsubmit {
+	float:left;
+	background:#9db09f;
+	opacity:1;
+	-moz-transition:opacity .3s ease-in-out;  
+	-webkit-transition:opacity .3s ease-in-out;
+    transition:opacity .3s ease-in-out;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+    -khtml-border-radius: 4px;
+	border-radius:4px 
+	-moz-box-shadow:4px 4px 0 #8a9b8c;
+    -webkit-box-shadow:4px 4px 0 #8a9b8c;
+    box-shadow:4px 4px 0 #8a9b8c;;
+	color:#555;
+	font-size:1.1em;
+	text-transform:uppercase;
+	text-shadow:0px 1px 1px #ddd;
+	font-weight:bold;
+	cursor:pointer;
+}
+#buttonsubmit:hover,
+#buttonsubmit:focus {
+		opacity:.9;
+}
+/* ------------------------------------------------------------------------------------
+--  CONTACT ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  SERVICES STYLES
+------------------------------------------------------------------------------------ */
+article.trigger-info{
+	width:708px;
+	border:1px solid #ddd;
+	float:left;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-border-radius:4px;
+}
+h3.trigger{
+	border-bottom:1px solid #ddd;
+	padding:0.8em 0.8em 0 0.8em;
+	background:url(images/trigger.jpg)no-repeat;
+	height:30px;
+	margin:0;
+	cursor:pointer;
+}
+.toggle_container p{
+	font-size:0.9em;
+	padding:4px;
+}
+/* ------------------------------------------------------------------------------------
+--  SERVICES ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  GALLERY STYLES
+------------------------------------------------------------------------------------ */
+a.grouped_elements{
+	width:139px;
+	height:120px;
+	border:1px solid #ddd;
+	padding:10px;
+	float:left;
+	background:#fff;
+	margin-right:20px;
+	margin-bottom:20px;
+	-moz-box-shadow:4px 4px 0 #8a9b8c;
+    -webkit-box-shadow:4px 4px 0 #8a9b8c;
+    box-shadow:4px 4px 0 #8a9b8c;
+}
+a.lastimg{
+	margin-right:0;
+}
+/* ------------------------------------------------------------------------------------
+--  GALLERY ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  ADDITIONAL PAGES STYLES
+------------------------------------------------------------------------------------ */
+#main-content-index-additional{
+	float:left;
+	width:980px;
+	background:rgba(0,0,0,0.8);
+	margin-top:30px;
+	clear:both;
+}
+#normal {
+    text-align:left; 
+    background-color:#efefef; 
+    border:1px solid #ccc; 
+	width:750px;
+    margin:40px;
+	float:left;
+}
+#additional-nav{
+	float:left;
+	width:750px;
+}
+#additional-nav ul{
+    margin:20px 20px 40px 20px; 
+    list-style:none; 
+    float:left; 
+	width:710px;
+}
+#additional-nav ul li {
+    margin:0 20px 0 0;
+	float:left;
+}
+#additional-nav ul a {
+    outline:none; 
+    text-decoration: none;
+    display:block;
+	color:#555;
+	font-size:0.8em;
+	padding-top:4px;
+	text-transform:capitalize;
+}
+#additional-nav ul a.active {
+    color:#000;
+	border-top:1px solid #000;
+}
+#empty-block{
+	float:left;
+	height:20px;
+	width:100%;
+}
+#normal figure{
+	background:#fff;
+	border:1px solid #ddd;
+	padding:20px;	
+}
+#normal figure.right{
+	float:right;
+	margin-left:20px;
+}
+#normal figure.left{
+	float:left;
+	margin-right:20px;
+}
+#normal figure.no-frame{
+	float:left;
+	margin-right:10px;
+	padding:0;
+	background:transparent;
+	border:none;
+	margin-top:-6px;
+}
+#normal strong{
+	padding-bottom:0.6em;
+    display:block;
+}
+#normal p:last-child{
+	margin-bottom:0;
+	padding-bottom:0;
+}
+/*---GALLERY---*/
+#gallery-wrapper{
+	float:left;
+	width:710px;
+}
+.spacegallery {
+	position: relative;
+	overflow: hidden;
+}
+.spacegallery img {
+	position: absolute;
+	left: 50%;
+}
+.spacegallery a {
+	position: absolute;
+	z-index: 1000;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+#timeline{
+	height:484px;
+	margin-top:10px;
+}
+p.small{
+	font-size:0.8em;
+}
+.panelinfo ol.history{
+	float:left;
+	list-style:none;
+	margin:20px 0 0 0;
+	padding:0;
+	width:708px;
+}
+.panelinfo ol.history li{
+	float:left;
+	width:218px;
+	margin-right:7px;
+	color:#555;
+	margin-right:20px;
+}
+.panelinfo ol.history li:last-child{
+	width:218px;
+	margin-right:0px;
+}
+/* ------------------------------------------------------------------------------------
+--  ADDITIONAL PAGES (HEIGHT IS NOT SET) ENDS HERE
+------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------
+--  THANKYOU PAGE STYLES
+------------------------------------------------------------------------------------ */
+#thanks{
+	float:left;
+	margin-top:20px;
+	background:#fff;
+	border:1px solid #ddd;
+	padding:20px;
+	width:668px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-border-radius:4px;
+}
+#thanks h1{
+	font-size:1.9em;
+	color:#555;
+	text-shadow:0 0 1px #000;
+	display:block;
+	margin-bottom:20px;
+}
+/* ------------------------------------------------------------------------------------
+--  THANKYOU PAGE ENDS HERE
+------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------
+--  ALL STYLES END HERE
+------------------------------------------------------------------------------------ */
